@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    font: normal 16px/1.5 "Titillium Web", sans-serif;
+    background-color: #456990;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+
+.div-titulo {
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(43, 48, 44, 0.712), rgba(43, 48, 44, 0.712)), url(../images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.div-titulo h1 {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 35px;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+    width: 90%;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.div-titulo h1::before {
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 30%;
+    background-color: #ee4540;
+    z-index: -1;
+}
+
+
+/*Estilos para la presentacion*/
+
+.seccion-presentacion {
+    width: 100vw;
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.seccion-presentacion .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-presentacion .row .div-item {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.seccion-presentacion .row .div-item .fas,
+.far {
+    font-size: 70px;
+    color: #000;
+}
+
+.seccion-presentacion .row .div-item h2 {
+    font-family: 'Righteous', cursive;
+    color: #fff;
+}
+
+.seccion-presentacion .row .div-item p {
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: rgb(167, 167, 167);
+}
+
+.seccion-presentacion .row .div-item ul {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(167, 167, 167);
+}
+
+.seccion-presentacion .row .div-item-medio {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #fff;
+}
+
+.timeline ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    background: #eee;
+}
+
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.timeline ul li div time {
+    position: absolute;
+    background: #f5af19;
+    width: 80px;
+    height: 30px;
+    top: -15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.timeline ul li div div {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline ul li div div p {
+    text-align: center;
+}
+
+.timeline ul li div .discovery {
+    margin-right: 10px;
+}
+
+.timeline ul li div .scientist img {
+    width: 100%;
+}
+
+.timeline ul li:nth-of-type(odd)>div {
+    left: 45px;
+}
+
+.timeline ul li:nth-of-type(even)>div {
+    left: -439px;
+}
+
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-of-type(odd) div {
+    transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+
+.timeline ul li:nth-of-type(even) div {
+    transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+    .timeline ul li div {
+        width: 250px;
+        flex-direction: column;
+    }
+    .timeline ul li div div {
+        width: 80%;
+        margin: 10px;
+    }
+    .timeline ul li:nth-of-type(odd) div {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    .timeline ul li:nth-of-type(even)>div {
+        left: -289px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /*Seccion de presentacion*/
+    .seccion-presentacion .row .div-item {
+        width: 80%;
+        margin-top: 10%;
+    }
+    .seccion-presentacion .row .div-item-medio {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline ul li {
+        margin-left: 20px;
+    }
+    .timeline ul li div {
+        width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-of-type(odd) div {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    .timeline ul li:nth-of-type(even)>div {
+        left: 45px;
+    }
+}
