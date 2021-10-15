@@ -28,8 +28,7 @@ body {
 }
 
 .div-titulo h1 {
-    font-family: 'Londrina Solid', cursive;
-    font-size: 35px;
+    font-size: 45px;
     color: #fff;
     z-index: 1;
     text-align: center;
@@ -37,6 +36,7 @@ body {
     position: relative;
     display: grid;
     place-items: center;
+    font-family: 'Acme', sans-serif;
 }
 
 .div-titulo h1::before {
@@ -49,21 +49,20 @@ body {
 }
 
 .div-titulo h2 {
-    font-family: 'Londrina Solid', cursive;
-    font-size: 35px;
+    font-size: 45px;
     color: #fff;
     z-index: 1;
     text-align: center;
-    width: 90%;
     position: relative;
     display: grid;
     place-items: center;
+    font-family: 'Acme', sans-serif;
 }
 
 .div-titulo h2::before {
     content: '';
     position: absolute;
-    width: 250px;
+    width: 270px;
     height: 30%;
     background-color: #ee4540;
     z-index: -1;
@@ -76,6 +75,8 @@ body {
     font-size: 25px;
     text-align: center;
     overflow-x: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
 }
 
 
@@ -110,19 +111,19 @@ body {
 }
 
 .seccion-presentacion .row .div-item h2 {
-    font-family: 'Righteous', cursive;
+    font-family: 'Acme', sans-serif;
     color: #fff;
 }
 
 .seccion-presentacion .row .div-item p {
     font-size: 22px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
     color: rgb(167, 167, 167);
 }
 
 .seccion-presentacion .row .div-item ul {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 17px;
     text-align: center;
     font-weight: bold;
@@ -180,9 +181,9 @@ body {
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
-    font-family: 'Bebas Neue', cursive;
     font-size: 35px;
     z-index: 1;
+    font-family: 'Staatliches', cursive;
 }
 
 .timeline ul li div div {
@@ -195,9 +196,8 @@ body {
 
 .timeline ul li div h1 {
     color: #ee4540;
-    font-weight: bold;
-    font-size: 30px;
-    font-family: 'Londrina Solid', cursive;
+    font-size: 35px;
+    font-family: 'Acme', sans-serif;
 }
 
 .timeline ul li div div p {
