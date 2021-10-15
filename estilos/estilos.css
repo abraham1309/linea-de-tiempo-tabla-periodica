@@ -152,7 +152,7 @@ body {
     width: 20px;
     height: 20px;
     z-index: 2;
-    background: #eee;
+    background: #ee4540;
 }
 
 .timeline ul li div {
@@ -172,14 +172,17 @@ body {
 .timeline ul li div time {
     position: absolute;
     background: #f5af19;
-    width: 80px;
-    height: 30px;
+    width: 40%;
+    height: 45px;
     top: -15px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+    z-index: 1;
 }
 
 .timeline ul li div div {
@@ -190,12 +193,27 @@ body {
     align-items: center;
 }
 
+.timeline ul li div h1 {
+    color: #ee4540;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Londrina Solid', cursive;
+}
+
 .timeline ul li div div p {
-    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: justify;
 }
 
 .timeline ul li div .discovery {
     margin-right: 10px;
+}
+
+.timeline ul li div .scientist {
+    margin-top: -10%;
+    background-color: transparent;
 }
 
 .timeline ul li div .scientist img {
@@ -261,10 +279,11 @@ body {
 
 @media screen and (max-width: 600px) {
     .timeline ul li {
-        margin-left: 20px;
+        margin-left: 1px;
     }
     .timeline ul li div {
-        width: calc(100vw - 91px);
+        margin-left: -350%;
+        width: calc(100vw - 70px);
     }
     .timeline ul li:nth-of-type(odd) div {
         transform: translate3d(0, 0, 0) rotate(0deg);

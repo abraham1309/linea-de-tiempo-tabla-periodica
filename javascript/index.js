@@ -3,9 +3,9 @@ var items = document.querySelectorAll(".timeline li");
 function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
     return (
-        rect.top >= -500 &&
+        rect.top >= -700 &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 400 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 600 &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
