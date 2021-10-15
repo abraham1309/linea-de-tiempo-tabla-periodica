@@ -19,6 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background: linear-gradient(rgba(43, 48, 44, 0.712), rgba(43, 48, 44, 0.712)), url(../images/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -77,6 +78,12 @@ body {
     overflow-x: hidden;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
+}
+
+.div-titulo i {
+    color: #fff;
+    font-size: 45px;
+    animation: movimiento 1.25s linear infinite;
 }
 
 
@@ -290,5 +297,17 @@ body {
     }
     .timeline ul li:nth-of-type(even)>div {
         left: 45px;
+    }
+}
+
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(35px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
